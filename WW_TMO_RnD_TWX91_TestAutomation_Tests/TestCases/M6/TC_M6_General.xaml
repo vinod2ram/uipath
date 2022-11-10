@@ -1,0 +1,1599 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_M6_General" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="934,11614" sap2010:WorkflowViewState.IdRef="TC_M6_General_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="36">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>Microsoft.Activities.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Fill the Details Tab,Add Tasks, Complete the task aand check Resolved status" DisplayName="TC_General" sap:VirtualizedContainerService.HintSize="686,11549" sap2010:WorkflowViewState.IdRef="Sequence_42">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="Str_NextAlpha" />
+      <Variable x:TypeArguments="x:Int32" Name="intDropDown_Counter" />
+      <Variable x:TypeArguments="x:Int32" Name="intListPageCounter" />
+      <Variable x:TypeArguments="x:Int32" Name="intWc_ObjectCounter" />
+      <Variable x:TypeArguments="x:Int32" Name="intCN_NumberCounter" />
+      <Variable x:TypeArguments="x:Int32" Name="intBreak_Counter" />
+      <Variable x:TypeArguments="x:Int32" Name="intNumberOfRetries" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomation1" />
+      <Variable x:TypeArguments="x:String" Name="strListPageCount" />
+      <Variable x:TypeArguments="x:String" Name="strExpCNType" />
+      <Variable x:TypeArguments="x:String" Name="strExpTitleValue" />
+      <Variable x:TypeArguments="x:String" Name="strExpPlatform" />
+      <Variable x:TypeArguments="x:String" Name="strExpFamily" />
+      <Variable x:TypeArguments="x:String" Name="strExpTask1" />
+      <Variable x:TypeArguments="x:String" Name="strExpTaskOwner1" />
+      <Variable x:TypeArguments="x:String" Name="strExpTaskOwner2" />
+      <Variable x:TypeArguments="x:String" Name="strExpTask2" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomation2" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomation3" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomation4" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomationSU" />
+      <Variable x:TypeArguments="x:String" Name="strExpCA1" />
+      <Variable x:TypeArguments="x:String" Name="strExpApprover" />
+      <Variable x:TypeArguments="x:String" Name="strAttachmentFileName" />
+      <Variable x:TypeArguments="x:String" Name="strExpAssociationNumber" />
+      <Variable x:TypeArguments="x:String" Name="strChangeNoticeNumber" />
+      <Variable x:TypeArguments="x:String" Name="strPDFExcelSheet" />
+      <Variable x:TypeArguments="x:String" Name="strdownloadedfilesA" />
+      <Variable x:TypeArguments="x:String" Name="strDestinationfolder" />
+      <Variable x:TypeArguments="x:String" Name="strExpAppendValue" />
+      <Variable x:TypeArguments="x:String" Name="strExpProduct" />
+      <Variable x:TypeArguments="x:String" Name="strExpTask3" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomationId3" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomationId2" />
+      <Variable x:TypeArguments="x:String" Default="\TestResultReport.xlsx" Name="strReportExcelFilePath" />
+      <Variable x:TypeArguments="x:String" Name="strExpDropDownValAll" />
+      <Variable x:TypeArguments="x:String" Name="strExpDropDownValOpen" />
+      <Variable x:TypeArguments="x:String" Name="strExpCAIReviewandApprovalTask" />
+      <Variable x:TypeArguments="x:String" Name="strExpBreakTaskCA1" />
+      <Variable x:TypeArguments="x:String" Name="strExpReviewandApprovalTask" />
+      <Variable x:TypeArguments="x:String" Name="strExpTask4" />
+      <Variable x:TypeArguments="x:String" Name="strExpImplementation" />
+      <Variable x:TypeArguments="x:String" Name="strExpChangeTask" />
+      <Variable x:TypeArguments="x:String" Name="strExpChangeTaskBreakCounter" />
+      <Variable x:TypeArguments="x:String" Name="strExpValidateImplementationTask" />
+      <Variable x:TypeArguments="x:String" Name="strExpResolved" />
+      <Variable x:TypeArguments="x:String" Name="strExpApprove" />
+      <Variable x:TypeArguments="x:String" Name="strExpTaskComplete" />
+      <Variable x:TypeArguments="x:String" Name="strMailSendEmailTo" />
+      <Variable x:TypeArguments="x:String" Name="strSendEmailTo" />
+      <Variable x:TypeArguments="x:String" Name="strTwxautomationId1" />
+      <Variable x:TypeArguments="x:String" Name="strExpUserGroup" />
+      <Variable x:TypeArguments="x:String" Name="strExpMembersCount" />
+      <Variable x:TypeArguments="x:String" Name="strBotMailID" />
+      <Variable x:TypeArguments="ss:SecureString" Name="strBotPwd" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="General" sap:VirtualizedContainerService.HintSize="644,11426" sap2010:WorkflowViewState.IdRef="Sequence_41">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Default="\HP_Test Data.xlsx" Name="strExcelFilePath" />
+        <Variable x:TypeArguments="x:String" Name="strTemplocation" />
+        <Variable x:TypeArguments="x:String" Name="strExpTCID" />
+        <Variable x:TypeArguments="x:String" Name="strURLName" />
+        <Variable x:TypeArguments="x:String" Name="strNewNamewostar" />
+        <Variable x:TypeArguments="x:String" Default="TC_17" Name="strActTCID" />
+        <Variable x:TypeArguments="x:String" Default="M6_General" Name="strSheetNameTdcreation" />
+        <Variable x:TypeArguments="x:String" Name="strExpApproverId" />
+        <Variable x:TypeArguments="x:String" Name="strExpCA1Id" />
+        <Variable x:TypeArguments="x:String" Name="strExpProcessStatus" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="602,8656" sap2010:WorkflowViewState.IdRef="Sequence_30">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="Dt_Testdata" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Config" sap:VirtualizedContainerService.HintSize="560,66" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="DtConfig" />
+            <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Config" />
+            <Variable x:TypeArguments="x:String" Default="Config" Name="ConfigSheetname" />
+            <Variable x:TypeArguments="x:Boolean" Name="blresult" />
+            <Variable x:TypeArguments="x:String" Default="WW_TMO_RnD_TWXTestAutomation_TempLocation" Name="strTempLocationAssetname" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Asset workflow" sap:VirtualizedContainerService.HintSize="576,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Get_Asset.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strTempLocationAssetname]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_Assetvalue">[strTemplocation]</OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <Assign sap:VirtualizedContainerService.HintSize="576,60" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign.To>
+              <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Config]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(Of String,string)]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign sap:VirtualizedContainerService.HintSize="576,60" sap2010:WorkflowViewState.IdRef="Assign_12">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strExcelFilePath]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[strTemplocation+strExcelFilePath]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:RetryScope DisplayName="load config" sap:VirtualizedContainerService.HintSize="576,508" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="3" RetryInterval="00:00:15">
+            <ui:RetryScope.ActivityBody>
+              <ActivityAction>
+                <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,270" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DtConfig]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="[ConfigSheetname.Trim]" WorkbookPath="[strExcelFilePath]" />
+                  <If Condition="[DtConfig.Rows.Count &gt; 1]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[blresult]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </If.Then>
+                    <If.Else>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[blresult]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:RetryScope.ActivityBody>
+            <ui:RetryScope.Condition>
+              <ActivityFunc x:TypeArguments="x:Boolean">
+                <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="IsTrue_2" Input="[blresult]" />
+              </ActivityFunc>
+            </ui:RetryScope.Condition>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:RetryScope>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DtConfig]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,477" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,329" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[Not String.IsNullOrEmpty(row(&quot;Name&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_7">
+                    <If.Then>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Config(row("Name").ToString.Trim)]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[row("Value").ToString.Trim]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachRow>
+          <Sequence DisplayName="Value mapping" sap:VirtualizedContainerService.HintSize="576,66" sap2010:WorkflowViewState.IdRef="Sequence_25">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Value mapping" sap:VirtualizedContainerService.HintSize="376,589" sap2010:WorkflowViewState.IdRef="Sequence_24">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="strDropDown_Counter" />
+                <Variable x:TypeArguments="x:String" Name="strListPageCounter" />
+                <Variable x:TypeArguments="x:String" Name="strWc_ObjectCounter" />
+                <Variable x:TypeArguments="x:String" Name="strCN_NumberCounter" />
+                <Variable x:TypeArguments="x:String" Name="strBreak_Counter" />
+                <Variable x:TypeArguments="x:String" Name="strNumberOfRetries" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="TWX Accounts" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_33">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strTwxautomation1]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Windchill_TWX_twxautomation1")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_34">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strTwxautomation2]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Windchill_TWX_twxautomation2")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_35">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strTwxautomation3]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Windchill_TWX_twxautomation3")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_36">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strTwxautomation4]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Windchill_TWX_twxautomation4")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_37">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strTwxautomationSU]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Windchill_TWX_twxautomation_SU")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,315" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                    <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strURLName]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Windchill_App_URL")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strDropDown_Counter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("DropDown_Counter").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_22">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strListPageCounter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("ListPageCounter").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_23">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strWc_ObjectCounter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Wc_ObjectCounter").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_24">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strCN_NumberCounter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("CN_NumberCounter").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_25">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strBreak_Counter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("Break_Counter").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_26">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strNumberOfRetries]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("NumberOfRetries").ToString]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_43">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[strMailSendEmailTo]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Config("EmailTo")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+              <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="MultipleAssign_5">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_27">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[intDropDown_Counter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strDropDown_Counter)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_28">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[intListPageCounter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strListPageCounter)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_29">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[intWc_ObjectCounter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strWc_ObjectCounter)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_30">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[intCN_NumberCounter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strCN_NumberCounter)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_31">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[intBreak_Counter]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strBreak_Counter)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_32">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:Int32">[intNumberOfRetries]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strNumberOfRetries)]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:MultipleAssign>
+            </Sequence>
+          </Sequence>
+        </Sequence>
+        <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Dt_Testdata]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="560,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="[strSheetNameTdcreation]" WorkbookPath="[strExcelFilePath]">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ReadRange>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_Testdata]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="560,8240" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,8120" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="TC_ID" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="484,185" sap2010:WorkflowViewState.IdRef="GetRowItem_94" Row="[row]">
+                  <ui:GetRowItem.Value>
+                    <OutArgument x:TypeArguments="x:String">[strExpTCID]</OutArgument>
+                  </ui:GetRowItem.Value>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:GetRowItem>
+                <If Condition="[strActTCID.Trim=strExpTCID.Trim]" sap:VirtualizedContainerService.HintSize="484,7803" sap2010:WorkflowViewState.IdRef="If_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,7616" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ListPageCount" DisplayName="ListPageCount" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_167" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strListPageCount]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTitleValue" DisplayName="ExpTitleValue" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_168" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTitleValue]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpCNType" DisplayName="ExpCNType" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_169" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCNType]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpPlatform" DisplayName="ExpPlatform" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_170" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPlatform]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpFamily" DisplayName="ExpFamily" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_171" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpFamily]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTask1" DisplayName="ExpTask1" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_172" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTask1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTaskOwner1" DisplayName="ExpTaskOwner1" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_173" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTaskOwner1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTask2" DisplayName="ExpTask2" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_174" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTask2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTaskOwner2" DisplayName="ExpTaskOwner2" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_175" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTaskOwner2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpCA1" DisplayName="ExpCA1" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_176" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCA1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpApprover" DisplayName="ExpApprover" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_177" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpApprover]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AttachmentFileName" DisplayName="AttachmentFileName" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_178" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAttachmentFileName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PDFExcelSheet" DisplayName="PDFExcelSheet" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_180" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPDFExcelSheet]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="downloadedfilesA" DisplayName="downloadedfilesA" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_181" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strdownloadedfilesA]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Destinationfolder" DisplayName="Destinationfolder" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_182" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDestinationfolder]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpAppendValue" DisplayName="ExpAppendValue" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_183" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpAppendValue]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpProduct" DisplayName="ExpProduct" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_184" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpProduct]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTask3" DisplayName="ExpTask3" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_185" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTask3]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpDropDownValAll" DisplayName="ExpDropDownValAll" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_186" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpDropDownValAll]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpDropDownValOpen" DisplayName="ExpDropDownValOpen" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_187" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpDropDownValOpen]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpCAIReview and Approval Task" DisplayName="ExpCAIReview and Approval Task" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_188" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCAIReviewandApprovalTask]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpBreakTaskCA1" DisplayName="ExpBreakTaskCA1" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_189" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpBreakTaskCA1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpReviewandApproval Task" DisplayName="ExpReviewandApproval Task" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_190" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpReviewandApprovalTask]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTask4" DisplayName="ExpTask4" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_191" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTask4]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpImplementation" DisplayName="ExpImplementation" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_192" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpImplementation]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpChangeTask" DisplayName="ExpChangeTask" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_193" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpChangeTask]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpChangeTaskBreakCounter" DisplayName="ExpChangeTaskBreakCounter" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_194" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpChangeTaskBreakCounter]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpValidateImplementationTask" DisplayName="ExpValidateImplementationTask" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_195" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpValidateImplementationTask]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpResolved" DisplayName="ExpResolved" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_196" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpResolved]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpApprove" DisplayName="ExpApprove" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="GetRowItem_197" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpApprove]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTaskComplete" DisplayName="ExpTaskComplete" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="GetRowItem_198" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTaskComplete]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpUserGroup" DisplayName="ExpUserGroup" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="GetRowItem_199" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpUserGroup]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpMembersCount" DisplayName="ExpMembersCount" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="GetRowItem_200" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpMembersCount]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpApproverId" DisplayName="ExpApproverId" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_201" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpApproverId]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpCA1Id" DisplayName="ExpCA1Id" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_202" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCA1Id]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpProcessStatus" DisplayName="ExpProcessStatus" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_203" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpProcessStatus]</OutArgument>
+                        </ui:GetRowItem.Value>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetRowItem>
+                    </Sequence>
+                  </If.Then>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetBotDetailsByEnvAsset workflow" sap:VirtualizedContainerService.HintSize="560,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_44" UnSafe="False" WorkflowFileName="GetBotDetailsByEnvAsset.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="strapplicationlogin">[strTwxautomationSU]</InArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_strBotMailID">[strBotMailID]</OutArgument>
+            <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_sstrBotPwd">[strBotPwd]</OutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </Sequence>
+      <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="602,2532" sap2010:WorkflowViewState.IdRef="Sequence_39">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Asset workflow" sap:VirtualizedContainerService.HintSize="421,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_39" UnSafe="False" WorkflowFileName="Get_Asset.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strMailSendEmailTo]</InArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_Assetvalue">[strSendEmailTo]</OutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Credential workflow" sap:VirtualizedContainerService.HintSize="421,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_40" UnSafe="False" WorkflowFileName="Get_Credential.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_UserName">[strTwxautomationId2]</OutArgument>
+            <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password" />
+            <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strTwxautomation2]</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Credential workflow" sap:VirtualizedContainerService.HintSize="421,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_41" UnSafe="False" WorkflowFileName="Get_Credential.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_UserName">[strTwxautomationId1]</OutArgument>
+            <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password" />
+            <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strTwxautomation1]</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Credential workflow" sap:VirtualizedContainerService.HintSize="421,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_42" UnSafe="False" WorkflowFileName="Get_Credential.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_UserName">[strTwxautomationId3]</OutArgument>
+            <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password" />
+            <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strTwxautomation3]</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+        <Sequence DisplayName="Update back to excel with A" sap:VirtualizedContainerService.HintSize="421,66" sap2010:WorkflowViewState.IdRef="Sequence_34">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="dt_Range" />
+            <Variable x:TypeArguments="x:String" Name="strTodayDate" />
+            <Variable x:TypeArguments="ui:GenericValue" Name="UsedRange" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="654,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[strTodayDate]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[Date.Now.ToString("MMdd")]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Range]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="654,87" sap2010:WorkflowViewState.IdRef="ReadRange_6" SheetName="[strSheetNameTdcreation]" WorkbookPath="[strExcelFilePath]" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Range]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="654,1401" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1253" sap2010:WorkflowViewState.IdRef="Sequence_33">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="strExpTID" />
+                    <Variable x:TypeArguments="x:String" Name="strlastName" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:GenericValue">[UsedRange]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:GenericValue">[dt_Range.Rows.IndexOf(row)+2]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="TC_ID" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="562,64" sap2010:WorkflowViewState.IdRef="GetRowItem_162" Row="[row]">
+                    <ui:GetRowItem.Value>
+                      <OutArgument x:TypeArguments="x:String">[strExpTID]</OutArgument>
+                    </ui:GetRowItem.Value>
+                  </ui:GetRowItem>
+                  <If Condition="[strExpTID=strActTCID.Trim]" sap:VirtualizedContainerService.HintSize="562,957" sap2010:WorkflowViewState.IdRef="If_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="526,780" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="GenearatedNewName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="484,64" sap2010:WorkflowViewState.IdRef="GetRowItem_163" Row="[row]">
+                          <ui:GetRowItem.Value>
+                            <OutArgument x:TypeArguments="x:String">[strlastName]</OutArgument>
+                          </ui:GetRowItem.Value>
+                        </ui:GetRowItem>
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strlastName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[strlastName.Substring(1)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strlastName]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[strlastName.Substring(0,4)]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <If Condition="[strlastName.Trim&lt;&gt;strTodayDate.Trim]" sap:VirtualizedContainerService.HintSize="484,384" sap2010:WorkflowViewState.IdRef="If_9">
+                          <If.Then>
+                            <Sequence sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ui:WriteCell Cell="[&quot;F&quot;+UsedRange.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[strSheetNameTdcreation]" Text="A" WorkbookPath="[strExcelFilePath]" />
+                            </Sequence>
+                          </If.Then>
+                        </If>
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachRow>
+        </Sequence>
+        <Sequence DisplayName="Generate new name" sap:VirtualizedContainerService.HintSize="421,66" sap2010:WorkflowViewState.IdRef="Sequence_38">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="sd:DataTable" Name="dt_Testdata" />
+            <Variable x:TypeArguments="ui:GenericValue" Name="UsedRange" />
+            <Variable x:TypeArguments="x:String" Name="strAlphatoExcel" />
+            <Variable x:TypeArguments="x:String" Name="strAlpha" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Testdata]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="576,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="[strSheetNameTdcreation]" WorkbookPath="[strExcelFilePath]" />
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Testdata]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,1745" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Get the alphabet with date for new name" sap:VirtualizedContainerService.HintSize="526,1597" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="strTestcaseID" />
+                    <Variable x:TypeArguments="x:String" Name="strNameMatchAct" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="TC_ID" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="484,64" sap2010:WorkflowViewState.IdRef="GetRowItem_164" Row="[row]">
+                    <ui:GetRowItem.Value>
+                      <OutArgument x:TypeArguments="x:String">[strTestcaseID]</OutArgument>
+                    </ui:GetRowItem.Value>
+                  </ui:GetRowItem>
+                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="GenearatedNewName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="484,64" sap2010:WorkflowViewState.IdRef="GetRowItem_165" Row="[row]">
+                    <ui:GetRowItem.Value>
+                      <OutArgument x:TypeArguments="x:String">[strNameMatchAct]</OutArgument>
+                    </ui:GetRowItem.Value>
+                  </ui:GetRowItem>
+                  <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="ui:GenericValue">[UsedRange]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="ui:GenericValue">[dt_Testdata.Rows.IndexOf(row)+2]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <Sequence DisplayName="Next alphabet" sap:VirtualizedContainerService.HintSize="484,356" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="GeneratedAlpha" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_166" Row="[row]">
+                      <ui:GetRowItem.Value>
+                        <OutArgument x:TypeArguments="x:String">[strAlpha]</OutArgument>
+                      </ui:GetRowItem.Value>
+                    </ui:GetRowItem>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_21">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[strAlphatoExcel]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Chr((Asc(StrAlpha))+1).ToString]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                    <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_22">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Str_NextAlpha]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[Chr((Asc(StrAlpha))+1).ToString+DateTime.Now.ToString("MMddyy")]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                  <If Condition="[strTestcaseID.Trim=strActTCID.Trim]" DisplayName="check the test case id with the actual test case id" sap:VirtualizedContainerService.HintSize="484,801" sap2010:WorkflowViewState.IdRef="If_11">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <Sequence DisplayName="Get the Next Alpha from excel" sap:VirtualizedContainerService.HintSize="376,624" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:WriteCell Cell="[&quot;F&quot;+UsedRange.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="[strSheetNameTdcreation]" Text="[strAlphatoExcel]" WorkbookPath="[strExcelFilePath]" />
+                        <ui:WriteCell Cell="[&quot;G&quot;+UsedRange.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="[strSheetNameTdcreation]" Text="[Str_NextAlpha]" WorkbookPath="[strExcelFilePath]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_23">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[strNewNamewostar]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Str_NextAlpha]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_24">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[Str_NextAlpha]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[Str_NextAlpha+"*"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <ui:Break sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Break_1" />
+                      </Sequence>
+                    </If.Then>
+                  </If>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachRow>
+        </Sequence>
+        <Sequence DisplayName="Login As Submitter" sap:VirtualizedContainerService.HintSize="421,66" sap2010:WorkflowViewState.IdRef="Sequence_46">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke windchill_Login As Submitter" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Windchill_Logon.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strURLName">[strURLName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strapplicationlogin">[strTwxautomationSU]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSheetNameTdcreation">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTCName">TC_M6_General</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TWX_Details Tab" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="TC_General\TWX_DetailsTab.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomation1">[strTwxautomation1]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strListPageCount">[strListPageCount]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">[strExpCNType]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTitleValue">[strExpTitleValue]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strNewNamewostar">[strNewNamewostar]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TWX_Hirerarchy Attributes Tab" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="TC_General\TWX_Hierarchy Attributes_Tasks_Tabs.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpFamily">[strExpFamily]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask1">[strExpTask1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner1">[strExpTaskOwner1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask2">[strExpTask2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner2">[strExpTaskOwner2]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TWX_Participants_Attachment_AssociationTabs" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_23" UnSafe="False" WorkflowFileName="TC_General\TWX_Participants_Attachment_AssociationTabs.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="strapplicationlogin">[strTwxautomation2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strtwxautomation3">[strTwxautomation3]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1">[strExpCA1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpApprover">[strExpApprover]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTemplocation">[strTemplocation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strAttachmentFileName">[strAttachmentFileName]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="strTwxautomationId2">[strTwxautomationId2]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="strTwxautomationId3">[strTwxautomationId3]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strListPageCount">[strListPageCount]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpApproverId">[strExpApproverId]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1Id">[strExpCA1Id]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+        <Sequence DisplayName="Login as Super User" sap:VirtualizedContainerService.HintSize="421,508" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PDF Validation" sap:VirtualizedContainerService.HintSize="336,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_25" UnSafe="False" WorkflowFileName="TC_General\TWX_SU_PDF Validation.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationSU">[strTwxautomationSU]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelPath">[strExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelSheet">[strPDFExcelSheet]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="StrdownloadedfilesA">[strdownloadedfilesA]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="StrDestinationfolder">[strTemplocation+strDestinationfolder]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">[strExpCNType]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTitleValue">[strExpTitleValue]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strNewNamewostar">[strNewNamewostar]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpFamily">[strExpFamily]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask1">[strExpTask1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask2">[strExpTask2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner1">[strExpTaskOwner1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner2">[strExpTaskOwner2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1">[strExpCA1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpApprover">[strExpApprover]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strAttachmentFileName">[strAttachmentFileName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId3">[strTwxautomationId3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId2">[strTwxautomationId2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpApproverId">[strExpApproverId]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1Id">[strExpCA1Id]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Details_Tasks _Tabs" sap:VirtualizedContainerService.HintSize="336,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_26" UnSafe="False" WorkflowFileName="TC_General\TWX_SU_Details_Tasks_tab.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTitleValue">[strExpTitleValue]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strNewNamewostar">[strNewNamewostar]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpAppendValue">[strExpAppendValue]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpFamily">[strExpFamily]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpProduct">[strExpProduct]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask3">[strExpTask3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner2">[strExpTaskOwner2]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WC_Validiation_SU workflow" sap:VirtualizedContainerService.HintSize="336,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_43" UnSafe="False" WorkflowFileName="TC_General\WC_Validiation_SU.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strChangeNoticeNumber" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpPlatform" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intWc_ObjectCounter" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intDropDown_Counter" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTitleValue">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpTitleValue" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strNewNamewostar">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strNewNamewostar" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpAppendValue">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpAppendValue" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpFamily">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpFamily" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpProduct">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpProduct" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask3">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpTask3" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner2">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpTaskOwner2" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intCN_NumberCounter" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strActTCID" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strSheetNameTdcreation" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTemplocation+strReportExcelFilePath" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strSendEmailTo" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId2">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTwxautomationId2" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpCNType" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId1">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTwxautomationId1" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpUserGroup">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpUserGroup" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intNumberOfRetries" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpMembersCount">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpMembersCount" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId3">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strTwxautomationId3" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValAll">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpDropDownValAll" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">
+                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="intListPageCounter" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCAIReviewandApprovalTask">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpCAIReviewandApprovalTask" />
+              </InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">
+                <mva:VisualBasicValue x:TypeArguments="ss:SecureString" ExpressionText="strBotPwd" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strBotMailID" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1Id">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="strExpCA1Id" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+        <Sequence DisplayName="Login As CA1" sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_60">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TWX_DetailsTab_Edit CA1Check" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_30" UnSafe="False" WorkflowFileName="TC_General\TWX_DetailsTab_CheckForEdit_CA1.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomation3">[strTwxautomation3]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpAppendValue">[strExpAppendValue]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strNewNamewostar">[strNewNamewostar]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTitleValue">[strExpTitleValue]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValAll">[strExpDropDownValAll]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCAIReviewandApprovalTask">[strExpCAIReviewandApprovalTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpBreakTaskCA1">[strExpBreakTaskCA1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId2">[strTwxautomationId2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpReviewandApprovalTask">[strExpReviewandApprovalTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskComplete">[strExpTaskComplete]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpApprove">[strExpApprove]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1Id">[strExpCA1Id]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+        <Sequence DisplayName=" login as Approver user twxautomation3" sap:VirtualizedContainerService.HintSize="421,356" sap2010:WorkflowViewState.IdRef="Sequence_67">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Credential workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_33" UnSafe="False" WorkflowFileName="Get_Credential.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <OutArgument x:TypeArguments="x:String" x:Key="out_UserName">[strTwxautomationId3]</OutArgument>
+              <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_Password" />
+              <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strTwxautomation3]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TWX_TasksTab AddTask4" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_32" UnSafe="False" WorkflowFileName="TC_General\TWX_TasksTab_Approver.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomation3">[strTwxautomation3]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask4">[strExpTask4]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner1">[strExpTaskOwner1]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strURLName">[strURLName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValAll">[strExpDropDownValAll]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpReviewandApprovalTask">[strExpReviewandApprovalTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpBreakTaskCA1">[strExpBreakTaskCA1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId3">[strTwxautomationId3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpImplementation">[strExpImplementation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpCA1Id">[strExpCA1Id]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+        <Sequence DisplayName="Login as Super User And Approve Task1-4" sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_77">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Approve all  Tasks1-4" sap:VirtualizedContainerService.HintSize="361,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_36" UnSafe="False" WorkflowFileName="TC_General\TWX_TasksApproval_SuperUser.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomation3">[strTwxautomation3]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask4">[strExpTask4]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner1">[strExpTaskOwner1]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strURLName">[strURLName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValAll">[strExpDropDownValAll]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpReviewandApprovalTask">[strExpReviewandApprovalTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpBreakTaskCA1">[strExpBreakTaskCA1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId3">[strTwxautomationId3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpImplementation">[strExpImplementation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask2">[strExpTask2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask3">[strExpTask3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask1">[strExpTask1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpChangeTaskBreakCounter">[strExpChangeTaskBreakCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpChangeTask">[strExpChangeTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpValidateImplementationTask">[strExpValidateImplementationTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpResolved">[strExpResolved]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskComplete">[strExpTaskComplete]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpApprove">[strExpApprove]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValueOpen">[strExpDropDownValOpen]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpProcessStatus">[strExpProcessStatus]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+        <Sequence DisplayName="Login as CA1 user twxautomation2" sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_81">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Approve Validate Tasks" sap:VirtualizedContainerService.HintSize="366,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_38" UnSafe="False" WorkflowFileName="TC_General\TWX_ValidateTaskApproval_CA1.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpPlatform">[strExpPlatform]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask4">[strExpTask4]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTaskOwner1">[strExpTaskOwner1]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strURLName">[strURLName]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValAll">[strExpDropDownValAll]</InArgument>
+              <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpReviewandApprovalTask">[strExpReviewandApprovalTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpBreakTaskCA1">[strExpBreakTaskCA1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomationId3">[strTwxautomationId3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpImplementation">[strExpImplementation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask2">[strExpTask2]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask3">[strExpTask3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpTask1">[strExpTask1]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpChangeTaskBreakCounter">[strExpChangeTaskBreakCounter]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpValidateImplementationTask">[strExpValidateImplementationTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpResolved">[strExpResolved]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpDropDownValOpen">[strExpDropDownValOpen]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strTwxautomation3">[strTwxautomation3]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strExpChangeTask">[strExpChangeTask]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </Sequence>
+      <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="602,66" sap2010:WorkflowViewState.IdRef="Sequence_40">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="final result" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_87">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="Body" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_25">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[Body]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["Hi Team,"+Environment.NewLine+Environment.NewLine+"I am Your Test Automation BOT, please find your Test results details :"+Environment.NewLine+Environment.NewLine+
+"TC Name : TC_M6_General - Execution Completed. Please find the attached Test Result Report"+Environment.NewLine+
+Environment.NewLine+Environment.NewLine+Environment.NewLine+"Thanks and Regards,"+Environment.NewLine+"Test Automation BOT"]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendSMTPMailMessage workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_45" UnSafe="False" WorkflowFileName="SendSMTPMailMessage.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strSendEmailTo">[strSendEmailTo]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strSubject">["Test Automation Result Notification : TC_M6_General - completed , Time stamp : "+Now.ToString+""]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="in_strBody">[Body]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+              <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>

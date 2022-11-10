@@ -1,0 +1,385 @@
+{
+  "name": "WW_TMO_RnD_TWX91_TestAutomation_Tests",
+  "description": "Blank Process",
+  "main": "Get_Asset.xaml",
+  "dependencies": {
+    "BeyondTrust_Library": "1.0.2",
+    "Microsoft.Activities": "[1.0.1]",
+    "UiPath.Excel.Activities": "[2.11.4]",
+    "UiPath.Mail.Activities": "[1.12.3]",
+    "UiPath.PDF.Activities": "[3.4.1]",
+    "UiPath.System.Activities": "[21.10.4]",
+    "UiPath.Testing.Activities": "[1.4.6]",
+    "UiPath.UIAutomation.Activities": "[21.10.5]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "21.10.3.0",
+  "projectVersion": "1.0.121707783",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Tests",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": [
+        "Delete-Test.xaml",
+        "Test.xaml"
+      ]
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "3337ebff-ab1d-42cc-9e9e-fece89098025",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_BOMChangesReport.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9f681adf-97f9-4c3d-9b30-d7bf69722cc6",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_ChangeDurationsReport.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "7c6ab0c8-7397-427e-80fb-f5894f100e87",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_SavedECNReports.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "d9b01884-4473-4719-bc19-eb553cfbd76f",
+        "fileName": "TestCases\\M3\\TC_M3_Disco_Obso.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "bdb957cf-3eef-4fe4-bf22-6d06ee9d40a1",
+        "fileName": "TestCases\\M6\\TC_M6_Temp_Immediate_Trigger1.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "68d9b09e-44e5-4503-805c-d7f25149dc82",
+        "fileName": "TestCases\\M3\\TC_M3_PrimeOnly.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "fd221994-f8ec-43d8-85f6-042d1bf38e6a",
+        "fileName": "TestCases\\M6\\TC_M6_Temp_Immediate_Trigger2.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "9a3dcf05-3622-4041-9b7d-cb931cfe1687",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_ChangeTasks.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "e8856820-6bfc-49f1-b08f-553dd2ef8d8e",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_ChangeNoticeTasksReport.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "72d87205-56e8-4bc0-be80-649be1b3a7b0",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_SubmittedvsResolved.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "8de855d9-62b3-45f6-82a4-7c16df12e56b",
+        "fileName": "TestCases\\M3\\TC_M3_Reporting_ChangeNotice.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "3e10c005-94aa-4a22-a4fe-b561ee788db8",
+        "fileName": "TestCases\\M3\\TC_M3_Prime and Service.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "63fcdfce-2b70-4ec0-a0e3-0f1ff53b5cae",
+        "fileName": "TestCases\\M3\\TC_M3_ServiceOnly.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "167a8c9f-9393-4c36-9e17-d6ea44181b9e",
+        "fileName": "TestCases\\M6\\TC_M6_General.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "70e56c2f-c0b3-4286-8536-56ffede8ded5",
+        "fileName": "TestCases\\M6\\TC_M6_Temp_Future_Trigger1.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "e1952794-a5fc-47f3-83c1-c51986765ec7",
+        "fileName": "TestCases\\M6\\TC_M6_Temp_Future_Trigger2.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "e4010e05-8212-4cca-ab52-459989d86b66",
+        "fileName": "TestCases\\M3\\TC_M3_Localization.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "bb82c9ec-6609-4f60-83de-b10ce4e0046b",
+        "fileName": "TestCases\\M4\\TC_M4_CurrentProduction_AA.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "ee8c7b98-e380-4605-80aa-0914286df77a",
+        "fileName": "TestCases\\M4\\TC_M4_CurrentProduction_IS.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "25cbcfa2-bf0e-4b81-a7ac-5c5c8117ecbb",
+        "fileName": "TestCases\\M4\\TC_M4_Initial_Release_NewMakerOnly.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "79ac2230-ac86-4573-963d-e7a4dd08437b",
+        "fileName": "TestCases\\M4\\TC_M4_InitialRelease_AllApproval.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "d1e52c2c-50ba-4b33-b3dd-f3673a4bd143",
+        "fileName": "TestCases\\M4\\TC_M4_NPI.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "f0e79b27-b5fd-4736-ae04-d0a8d8c93ced",
+        "fileName": "TestCases\\M4\\TC_M4_ProductRelease_HW.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "82b2aa29-f900-44b9-81f6-c1c35e1e5591",
+        "fileName": "TestCases\\M4\\TC_M4_ProductRelease_SW.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "550aceb8-7b97-4ee3-92ac-716c9b81524c",
+        "fileName": "TestCases\\M4\\TC_M4_ServiceSupport.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "17a7f611-ffdc-4e67-b65b-fd8a958cfe22",
+        "fileName": "TestCases\\M6\\TC_M6_FFF.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "2ae6d529-35e2-4c7f-b29d-0fa833d046c3",
+        "fileName": "TestCases\\M4\\TC_M4_OOD_Flag.xaml"
+      }
+    ],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_BOMChangesReport.xaml",
+      "uniqueId": "3337ebff-ab1d-42cc-9e9e-fece89098025",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_ChangeDurationsReport.xaml",
+      "uniqueId": "9f681adf-97f9-4c3d-9b30-d7bf69722cc6",
+      "input": [
+        {
+          "name": "argument1",
+          "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "required": false,
+          "hasDefault": false
+        }
+      ],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_SavedECNReports.xaml",
+      "uniqueId": "7c6ab0c8-7397-427e-80fb-f5894f100e87",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Disco_Obso.xaml",
+      "uniqueId": "d9b01884-4473-4719-bc19-eb553cfbd76f",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M6\\TC_M6_Temp_Immediate_Trigger1.xaml",
+      "uniqueId": "bdb957cf-3eef-4fe4-bf22-6d06ee9d40a1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_PrimeOnly.xaml",
+      "uniqueId": "68d9b09e-44e5-4503-805c-d7f25149dc82",
+      "input": [
+        {
+          "name": "strReportExcelPath",
+          "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "strReportSheet",
+          "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "required": false,
+          "hasDefault": false
+        }
+      ],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M6\\TC_M6_Temp_Immediate_Trigger2.xaml",
+      "uniqueId": "fd221994-f8ec-43d8-85f6-042d1bf38e6a",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_ChangeTasks.xaml",
+      "uniqueId": "9a3dcf05-3622-4041-9b7d-cb931cfe1687",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_ChangeNoticeTasksReport.xaml",
+      "uniqueId": "e8856820-6bfc-49f1-b08f-553dd2ef8d8e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_SubmittedvsResolved.xaml",
+      "uniqueId": "72d87205-56e8-4bc0-be80-649be1b3a7b0",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Reporting_ChangeNotice.xaml",
+      "uniqueId": "8de855d9-62b3-45f6-82a4-7c16df12e56b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Prime and Service.xaml",
+      "uniqueId": "3e10c005-94aa-4a22-a4fe-b561ee788db8",
+      "input": [
+        {
+          "name": "strReportExcelPath",
+          "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "required": false,
+          "hasDefault": false
+        },
+        {
+          "name": "strReportSheet",
+          "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "required": false,
+          "hasDefault": false
+        }
+      ],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_ServiceOnly.xaml",
+      "uniqueId": "63fcdfce-2b70-4ec0-a0e3-0f1ff53b5cae",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M6\\TC_M6_General.xaml",
+      "uniqueId": "167a8c9f-9393-4c36-9e17-d6ea44181b9e",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M6\\TC_M6_Temp_Future_Trigger1.xaml",
+      "uniqueId": "70e56c2f-c0b3-4286-8536-56ffede8ded5",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M6\\TC_M6_Temp_Future_Trigger2.xaml",
+      "uniqueId": "e1952794-a5fc-47f3-83c1-c51986765ec7",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M3\\TC_M3_Localization.xaml",
+      "uniqueId": "e4010e05-8212-4cca-ab52-459989d86b66",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_CurrentProduction_AA.xaml",
+      "uniqueId": "bb82c9ec-6609-4f60-83de-b10ce4e0046b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_CurrentProduction_IS.xaml",
+      "uniqueId": "ee8c7b98-e380-4605-80aa-0914286df77a",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_Initial_Release_NewMakerOnly.xaml",
+      "uniqueId": "25cbcfa2-bf0e-4b81-a7ac-5c5c8117ecbb",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_InitialRelease_AllApproval.xaml",
+      "uniqueId": "79ac2230-ac86-4573-963d-e7a4dd08437b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_NPI.xaml",
+      "uniqueId": "d1e52c2c-50ba-4b33-b3dd-f3673a4bd143",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_ProductRelease_HW.xaml",
+      "uniqueId": "f0e79b27-b5fd-4736-ae04-d0a8d8c93ced",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_ProductRelease_SW.xaml",
+      "uniqueId": "82b2aa29-f900-44b9-81f6-c1c35e1e5591",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M4\\TC_M4_ServiceSupport.xaml",
+      "uniqueId": "550aceb8-7b97-4ee3-92ac-716c9b81524c",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "TestCases\\M6\\TC_M6_FFF.xaml",
+      "uniqueId": "17a7f611-ffdc-4e67-b65b-fd8a958cfe22",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy",
+  "coverageMergeWorkflowPath": "CoverageMerge167976.xaml"
+}

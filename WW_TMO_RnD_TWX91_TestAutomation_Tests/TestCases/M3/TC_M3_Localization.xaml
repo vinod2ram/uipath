@@ -1,0 +1,2053 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TC_Localization" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2721" sap2010:WorkflowViewState.IdRef="TC_Localization_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.microsoft.com/workflow/2012/07/xaml/activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ss="clr-namespace:System.Security;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="78">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Testing</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Testing.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>Microsoft.Activities.Expressions</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>BalaReva.Excel.Sheets</x:String>
+      <x:String>BalaReva.Excel.Base</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Security</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="76">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Testing</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel</AssemblyReference>
+      <AssemblyReference>BalaReva.Excel.Base</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Create a new data for localization in windchill,and submit a change notice number in TWX with the same new data created in windchill. Perform the appropriate Bom changes and approval task. validate the changes made in TWX in windchill as well as summary report" DisplayName="Localization" sap:VirtualizedContainerService.HintSize="463,2656" sap2010:WorkflowViewState.IdRef="Sequence_32">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="strNewNamewostar" />
+      <Variable x:TypeArguments="x:String" Default="TC_02" Name="strActTCID" />
+      <Variable x:TypeArguments="x:String" Name="strExpReadytoPublish" />
+      <Variable x:TypeArguments="x:String" Name="strExpBOMChange" />
+      <Variable x:TypeArguments="x:String" Name="strExpBusinessUnit" />
+      <Variable x:TypeArguments="x:String" Name="strExpPrimaryPro" />
+      <Variable x:TypeArguments="x:String" Name="strExpCNType" />
+      <Variable x:TypeArguments="x:String" Name="strExpPriority" />
+      <Variable x:TypeArguments="x:String" Name="strExpDesignChange" />
+      <Variable x:TypeArguments="x:String" Name="strExpHRSR" />
+      <Variable x:TypeArguments="x:String" Name="strExpWorkSpace" />
+      <Variable x:TypeArguments="x:String" Name="strExpProposedSolution" />
+      <Variable x:TypeArguments="x:String" Name="strExpObjects2" />
+      <Variable x:TypeArguments="x:String" Default="\HP_Test Data.xlsx" Name="strExcelFilePath" />
+      <Variable x:TypeArguments="x:String" Default="Localization_CreateBOM" Name="strSheetNameTdcreation" />
+      <Variable x:TypeArguments="x:String" Name="strPartNumberWhereUsed" />
+      <Variable x:TypeArguments="x:String" Name="strRemovePartNumber" />
+      <Variable x:TypeArguments="x:String" Name="strAddPartNumber" />
+      <Variable x:TypeArguments="x:String" Name="strExpPartCount" />
+      <Variable x:TypeArguments="x:String" Name="strRemoveActionPart" />
+      <Variable x:TypeArguments="x:String" Name="strRemoveQty" />
+      <Variable x:TypeArguments="x:String" Name="strRemoveActionType" />
+      <Variable x:TypeArguments="x:String" Name="strChangeQtySubmit2" />
+      <Variable x:TypeArguments="x:String" Name="strChangeActionType" />
+      <Variable x:TypeArguments="x:String" Name="strExpYesResult" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedDocObjects" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedProjectObjects" />
+      <Variable x:TypeArguments="x:String" Name="strAddParcipantUsergrp" />
+      <Variable x:TypeArguments="x:String" Name="strUserrmailId" />
+      <Variable x:TypeArguments="x:String" Name="strParticipantRole" />
+      <Variable x:TypeArguments="x:String" Name="strWWClassAssignee" />
+      <Variable x:TypeArguments="x:String" Name="strSVR_MfgDateAssignee" />
+      <Variable x:TypeArguments="x:String" Name="strSerialNumberAssignee" />
+      <Variable x:TypeArguments="x:String" Name="strPDMCongrp" />
+      <Variable x:TypeArguments="x:String" Name="strCHANGEADMINISTRATORI" />
+      <Variable x:TypeArguments="x:String" Name="strCHANGEADMINISTRATOR2" />
+      <Variable x:TypeArguments="x:String" Name="strNotifies" />
+      <Variable x:TypeArguments="x:String" Name="strPAFORPNRFAssignee" />
+      <Variable x:TypeArguments="x:String" Name="strAssociationChangeNumber" />
+      <Variable x:TypeArguments="x:String" Name="strObsoletePartVersion" />
+      <Variable x:TypeArguments="x:String" Name="strObsoletePartNumber" />
+      <Variable x:TypeArguments="x:String" Name="strCHANGEADMINISTRATOR3" />
+      <Variable x:TypeArguments="x:String" Name="strChangeNoticeNumber" />
+      <Variable x:TypeArguments="x:String" Name="strNameExt" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedMetadata" />
+      <Variable x:TypeArguments="x:String" Name="strNamecolName" />
+      <Variable x:TypeArguments="x:String" Name="strDescriptionColName" />
+      <Variable x:TypeArguments="x:String" Name="strContextColName" />
+      <Variable x:TypeArguments="x:String" Name="strComplexityColName" />
+      <Variable x:TypeArguments="x:String" Name="strCategoryColName" />
+      <Variable x:TypeArguments="x:String" Name="strLocationColName" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedObjectsCount" />
+      <Variable x:TypeArguments="x:String" Name="strAssociatedProcessobject" />
+      <Variable x:TypeArguments="x:String" Name="strAssociatedRefObject" />
+      <Variable x:TypeArguments="x:String" Name="strBomChangesParentPart" />
+      <Variable x:TypeArguments="x:String" Name="strInitialized" />
+      <Variable x:TypeArguments="x:String" Name="strUsergroupCol" />
+      <Variable x:TypeArguments="x:String" Name="strAffobjNA" />
+      <Variable x:TypeArguments="x:String" Name="strNAObjects" />
+      <Variable x:TypeArguments="x:String" Name="strPart1023" />
+      <Variable x:TypeArguments="x:String" Name="strPart2736" />
+      <Variable x:TypeArguments="x:String" Name="strQtyCH955_00200" />
+      <Variable x:TypeArguments="x:String" Name="strQtyC799_00002" />
+      <Variable x:TypeArguments="x:String" Name="strQtyCH955_40229" />
+      <Variable x:TypeArguments="x:String" Name="strQtyQ1271_00001" />
+      <Variable x:TypeArguments="x:String" Name="strQtyQ1271_00003" />
+      <Variable x:TypeArguments="x:String" Name="strQtyCH995_0178" />
+      <Variable x:TypeArguments="x:String" Name="strDiffpartnumberqty" />
+      <Variable x:TypeArguments="x:String" Name="StrAttachmentfile" />
+      <Variable x:TypeArguments="x:String" Name="StrResultingObjects" />
+      <Variable x:TypeArguments="x:String" Name="StrResultingObjectscount" />
+      <Variable x:TypeArguments="x:String" Name="StrAffectedObjects" />
+      <Variable x:TypeArguments="x:String" Name="StrPart00200" />
+      <Variable x:TypeArguments="x:String" Name="StrPart00002" />
+      <Variable x:TypeArguments="x:String" Name="StrPart40229" />
+      <Variable x:TypeArguments="x:String" Name="StrPart00001" />
+      <Variable x:TypeArguments="x:String" Name="StrPart00003" />
+      <Variable x:TypeArguments="x:String" Name="StrPart00178" />
+      <Variable x:TypeArguments="x:String" Name="StrQtyCh955_1023" />
+      <Variable x:TypeArguments="x:String" Name="StrQtyQ1271_00002" />
+      <Variable x:TypeArguments="x:String" Name="strPartWithAAA" />
+      <Variable x:TypeArguments="x:String" Name="strPartWithBBB" />
+      <Variable x:TypeArguments="x:String" Name="strPartWithCCC" />
+      <Variable x:TypeArguments="x:String" Name="strUserlist" />
+      <Variable x:TypeArguments="x:String" Name="strCA1ApprovalTask" />
+      <Variable x:TypeArguments="x:String" Name="strTypeAll" />
+      <Variable x:TypeArguments="x:String" Name="strExpCCC_TestUSER" />
+      <Variable x:TypeArguments="x:String" Name="strExpBBB_TestUSER" />
+      <Variable x:TypeArguments="x:String" Name="strExpAAA_TestUSER" />
+      <Variable x:TypeArguments="x:String" Name="strExpTaskCA2" />
+      <Variable x:TypeArguments="x:String" Name="strProposeSolCA2" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedMetadata1" />
+      <Variable x:TypeArguments="x:String" Name="strActNewName" />
+      <Variable x:TypeArguments="x:String" Name="strNumCrit" />
+      <Variable x:TypeArguments="x:String" Name="strExpObject1" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedMetadata2" />
+      <Variable x:TypeArguments="x:String" Name="strPendingApprovalCount" />
+      <Variable x:TypeArguments="x:String" Name="strPart00004" />
+      <Variable x:TypeArguments="x:String" Name="strQty00004" />
+      <Variable x:TypeArguments="x:String" Name="strQtylocalizationSubmit" />
+      <Variable x:TypeArguments="x:String" Name="strQtylocalization" />
+      <Variable x:TypeArguments="x:String" Name="strExpStatusmsg" />
+      <Variable x:TypeArguments="x:String" Name="strAffobjuseexisting" />
+      <Variable x:TypeArguments="x:String" Name="strExpUnderReview" />
+      <Variable x:TypeArguments="x:String" Name="strExpInitializedStatus" />
+      <Variable x:TypeArguments="x:String" Name="strLocalizationPartNumber" />
+      <Variable x:TypeArguments="x:String" Name="strPartNum0000" />
+      <Variable x:TypeArguments="x:String" Name="stropen" />
+      <Variable x:TypeArguments="x:String" Name="strDropDownVal" />
+      <Variable x:TypeArguments="x:String" Name="strExpRework" />
+      <Variable x:TypeArguments="x:String" Name="strExpApprove" />
+      <Variable x:TypeArguments="x:String" Name="strCA3ControlRun" />
+      <Variable x:TypeArguments="x:String" Name="strEditTaskDropDownVal" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedProjects" />
+      <Variable x:TypeArguments="x:String" Name="strEstDateVal" />
+      <Variable x:TypeArguments="x:String" Name="strPartWithBBB1" />
+      <Variable x:TypeArguments="x:String" Name="strSerialNoDateTask" />
+      <Variable x:TypeArguments="x:String" Name="strExpReleased" />
+      <Variable x:TypeArguments="x:String" Name="strExpCnStatus" />
+      <Variable x:TypeArguments="x:String" Name="strLoc" />
+      <Variable x:TypeArguments="x:String" Name="strexpResolved" />
+      <Variable x:TypeArguments="x:String" Name="strReleasedSts" />
+      <Variable x:TypeArguments="x:String" Name="strcreatedby" />
+      <Variable x:TypeArguments="x:String" Name="strAffectedObjectsCountRework" />
+      <Variable x:TypeArguments="x:String" Name="strResultingObjectscountRework" />
+      <Variable x:TypeArguments="x:String" Name="strURLName" />
+      <Variable x:TypeArguments="x:String" Name="strwindowslogin" />
+      <Variable x:TypeArguments="x:String" Name="strapplicationlogin" />
+      <Variable x:TypeArguments="x:String" Name="strExpPartState" />
+      <Variable x:TypeArguments="x:String" Name="strdownloadedfilesA" />
+      <Variable x:TypeArguments="x:String" Name="strDestinationfolder" />
+      <Variable x:TypeArguments="x:String" Name="strExpPDFCA1" />
+      <Variable x:TypeArguments="x:String" Name="strExpPDFCA2" />
+      <Variable x:TypeArguments="x:String" Name="strExpPDFCA3" />
+      <Variable x:TypeArguments="x:String" Name="strCCCNotifies" />
+      <Variable x:TypeArguments="x:String" Name="strBOMUser1" />
+      <Variable x:TypeArguments="x:String" Name="strBOMUser2" />
+      <Variable x:TypeArguments="x:String" Name="strR510" />
+      <Variable x:TypeArguments="x:String" Name="strPDFExcelSheet" />
+      <Variable x:TypeArguments="x:String" Name="strDesignChangesVal" />
+      <Variable x:TypeArguments="x:String" Name="strDateVal" />
+      <Variable x:TypeArguments="x:String" Name="strLocaltxt" />
+      <Variable x:TypeArguments="x:String" Name="strCNReportval" />
+      <Variable x:TypeArguments="x:String" Name="strNameval" />
+      <Variable x:TypeArguments="x:String" Name="strBusinessUnitval" />
+      <Variable x:TypeArguments="x:String" Name="strPryProjval" />
+      <Variable x:TypeArguments="x:String" Name="strCNTypeval" />
+      <Variable x:TypeArguments="x:String" Name="strPropSolutionval" />
+      <Variable x:TypeArguments="x:String" Name="strImpplanval" />
+      <Variable x:TypeArguments="x:String" Name="strPriorityval" />
+      <Variable x:TypeArguments="x:String" Name="strMPAContactval" />
+      <Variable x:TypeArguments="x:String" Name="strPDMval" />
+      <Variable x:TypeArguments="x:String" Name="strCH955AAA_Test" />
+      <Variable x:TypeArguments="x:String" Name="strCH955BBB_Test" />
+      <Variable x:TypeArguments="x:String" Name="strCH955CCC_Test" />
+      <Variable x:TypeArguments="x:String" Name="strcolupdate" />
+      <Variable x:TypeArguments="x:String" Name="strNumberName" />
+      <Variable x:TypeArguments="x:String" Name="strTemplocation" />
+      <Variable x:TypeArguments="x:String" Default="WW_TMO_RnD_TWXTestAutomation_TempLocation" Name="strTempLocationAssetname" />
+      <Variable x:TypeArguments="x:Int32" Name="intDropDown_Counter" />
+      <Variable x:TypeArguments="x:Int32" Name="intListPageCounter" />
+      <Variable x:TypeArguments="x:Int32" Name="intWc_ObjectCounter" />
+      <Variable x:TypeArguments="x:Int32" Name="intCN_NumberCounter" />
+      <Variable x:TypeArguments="x:String" Name="strbasedataAssetname" />
+      <Variable x:TypeArguments="x:Int32" Name="intBreakCounter" />
+      <Variable x:TypeArguments="x:Int32" Name="intInitialize_Counter" />
+      <Variable x:TypeArguments="x:Int32" Name="intNumberOfRetries" />
+      <Variable x:TypeArguments="x:String" Name="strEmailTo" />
+      <Variable x:TypeArguments="x:String" Name="strSendEmailTo" />
+      <Variable x:TypeArguments="x:String" Default="\TestResultReport.xlsx" Name="strReportExcelFilePath" />
+      <Variable x:TypeArguments="ss:SecureString" Name="strBotPwd" />
+      <Variable x:TypeArguments="x:String" Name="strBotMailID" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="... Given" sap:VirtualizedContainerService.HintSize="421,66" sap2010:WorkflowViewState.IdRef="Sequence_29">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="Dt_Testdata" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Config" sap:VirtualizedContainerService.HintSize="334,66" sap2010:WorkflowViewState.IdRef="Sequence_56">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="DtConfig" />
+          <Variable x:TypeArguments="scg:Dictionary(x:String, x:String)" Name="Config" />
+          <Variable x:TypeArguments="x:String" Default="Config" Name="ConfigSheetname" />
+          <Variable x:TypeArguments="x:Boolean" Name="blresult" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Asset workflow" sap:VirtualizedContainerService.HintSize="576,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Get_Asset.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strTempLocationAssetname]</InArgument>
+            <OutArgument x:TypeArguments="x:String" x:Key="out_Assetvalue">[strTemplocation]</OutArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+        <Assign sap:VirtualizedContainerService.HintSize="576,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+          <Assign.To>
+            <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[Config]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="scg:Dictionary(x:String, x:String)">[new Dictionary(Of String,string)]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <Assign sap:VirtualizedContainerService.HintSize="576,60" sap2010:WorkflowViewState.IdRef="Assign_17">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strExcelFilePath]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[strTemplocation+strExcelFilePath]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:RetryScope DisplayName="load config" sap:VirtualizedContainerService.HintSize="576,508" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3" RetryInterval="00:00:15">
+          <ui:RetryScope.ActivityBody>
+            <ActivityAction>
+              <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="376,270" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DtConfig]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_5" SheetName="[ConfigSheetname.Trim]" WorkbookPath="[strExcelFilePath]" />
+                <If Condition="[DtConfig.Rows.Count &gt; 1]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_11">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[blresult]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </If.Then>
+                  <If.Else>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:Boolean">[blresult]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </If.Else>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </ui:RetryScope.ActivityBody>
+          <ui:RetryScope.Condition>
+            <ActivityFunc x:TypeArguments="x:Boolean">
+              <p:IsTrue DisplayName="Is true" sap:VirtualizedContainerService.HintSize="284,79" sap2010:WorkflowViewState.IdRef="IsTrue_1" Input="[blresult]" />
+            </ActivityFunc>
+          </ui:RetryScope.Condition>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:RetryScope>
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DtConfig]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="576,477" sap2010:WorkflowViewState.IdRef="ForEachRow_5">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,329" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If Condition="[Not String.IsNullOrEmpty(row(&quot;Name&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If.Then>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[Config(row("Name").ToString.Trim)]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[row("Value").ToString.Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </If.Then>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+        <Sequence DisplayName="Value mapping" sap:VirtualizedContainerService.HintSize="576,828" sap2010:WorkflowViewState.IdRef="Sequence_55">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="strDropDown_Counter" />
+            <Variable x:TypeArguments="x:String" Name="strListPageCounter" />
+            <Variable x:TypeArguments="x:String" Name="strWc_ObjectCounter" />
+            <Variable x:TypeArguments="x:String" Name="strCN_NumberCounter" />
+            <Variable x:TypeArguments="x:String" Name="strBreakCounter" />
+            <Variable x:TypeArguments="x:String" Name="strInitialize_Counter" />
+            <Variable x:TypeArguments="x:String" Name="strNumberOfRetries" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,410" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strURLName]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("Windchill_App_URL")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strapplicationlogin]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("Application_Login_Credentials").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strDropDown_Counter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("DropDown_Counter").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strListPageCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("ListPageCounter").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strWc_ObjectCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("Wc_ObjectCounter").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strCN_NumberCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("CN_NumberCounter").ToString]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strbasedataAssetname]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("M3_Localization_Basedata")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strBreakCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("Break_Counter")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strInitialize_Counter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("Initialize_Counter")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_19">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strNumberOfRetries]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("NumberOfRetries")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_21">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:String">[strEmailTo]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:String">[Config("EmailTo")]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+          <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,286" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+            <ui:MultipleAssign.AssignOperations>
+              <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                <ui:AssignOperation sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intDropDown_Counter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strDropDown_Counter)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intListPageCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strListPageCounter)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intWc_ObjectCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strWc_ObjectCounter)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intCN_NumberCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strCN_NumberCounter)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_17">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intBreakCounter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strBreakCounter)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_18">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intInitialize_Counter]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strInitialize_Counter)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+                <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
+                  <ui:AssignOperation.To>
+                    <OutArgument x:TypeArguments="x:Int32">[intNumberOfRetries]</OutArgument>
+                  </ui:AssignOperation.To>
+                  <ui:AssignOperation.Value>
+                    <InArgument x:TypeArguments="x:Int32">[Convert.ToInt32(strNumberOfRetries)]</InArgument>
+                  </ui:AssignOperation.Value>
+                </ui:AssignOperation>
+              </scg:List>
+            </ui:MultipleAssign.AssignOperations>
+          </ui:MultipleAssign>
+        </Sequence>
+      </Sequence>
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Dt_Testdata]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_4" SheetName="[strSheetNameTdcreation]" WorkbookPath="[strExcelFilePath]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadRange>
+      <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt_Testdata]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+        <ui:ForEachRow.Body>
+          <ActivityAction x:TypeArguments="sd:DataRow">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="526,974" sap2010:WorkflowViewState.IdRef="Sequence_19">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="strExpTCID" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="TC_ID" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="484,185" sap2010:WorkflowViewState.IdRef="GetRowItem_161" Row="[row]">
+                <ui:GetRowItem.Value>
+                  <OutArgument x:TypeArguments="x:String">[strExpTCID]</OutArgument>
+                </ui:GetRowItem.Value>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:GetRowItem>
+              <If Condition="[strActTCID.Trim=strExpTCID.Trim]" sap:VirtualizedContainerService.HintSize="484,657" sap2010:WorkflowViewState.IdRef="If_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <If.Then>
+                  <Sequence DisplayName="Get Test data" sap:VirtualizedContainerService.HintSize="304,470" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,2476" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpReadytoPublish" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_163" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpReadytoPublish]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpBOMChange" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_164" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpBOMChange]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="BusinessUnit" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_172" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpBusinessUnit]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PrimaryPro" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_173" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPrimaryPro]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CNType" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_174" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCNType]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Priority" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_175" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPriority]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="DesignChange" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_176" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpDesignChange]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="HRSR" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_177" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpHRSR]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpObjects1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_178" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpObject1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpObjects2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_179" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpObjects2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="WorkSpace" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_180" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpWorkSpace]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ProposedSolution" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_181" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpProposedSolution]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ProposedSolutionCA1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_450" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strProposeSolCA2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="NameExt" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="GetRowItem_183" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strNameExt]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                    </Sequence>
+                    <Sequence DisplayName="Localization 3 comp and WC" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PartNumberWhereUsed" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_321" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPartNumberWhereUsed]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="RemovePartNumber" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_322" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strRemovePartNumber]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpPartCount" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_323" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPartCount]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="RemoveActionPart" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_324" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strRemoveActionPart]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="RemoveQty" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_325" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strRemoveQty]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="RemoveActionType" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_326" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strRemoveActionType]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ChangeQtySubmit2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_327" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strChangeQtySubmit2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ChangeActionType" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_328" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strChangeActionType]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpYesResult" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_329" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpYesResult]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedDocObjects" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_330" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedDocObjects]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedProjectObjects" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_331" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedProjectObjects]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AddParcipantUsergrp" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_333" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAddParcipantUsergrp]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="UserrmailId" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_334" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strUserrmailId]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ParticipantRole" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_335" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strParticipantRole]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PDMCongrp" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_336" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPDMCongrp]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CHANGEADMINISTRATORI" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_337" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCHANGEADMINISTRATORI]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CHANGEADMINISTRATOR2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_338" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCHANGEADMINISTRATOR2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CHANGEADMINISTRATOR3" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_339" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCHANGEADMINISTRATOR3]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Notifies" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_340" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strNotifies]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ObsoletePartVersion" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_332" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strObsoletePartVersion]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ObsoletePartNumber" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_341" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strObsoletePartNumber]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedMetadata" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_342" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedMetadata]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedMetadata2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_343" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedMetadata2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="NamecolName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_344" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strNamecolName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="DescriptionColName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_345" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDescriptionColName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ContextColName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_346" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strContextColName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ComplexityColName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_347" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strComplexityColName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CategoryColName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_348" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCategoryColName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="LocationColName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_349" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strLocationColName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ResultingObjects" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_350" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strResultingObjects]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ResultingObjectscount" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_351" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strResultingObjectscount]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedObjects" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_352" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedObjects]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedObjectsCount" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_353" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedObjectsCount]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AssociatedProcessobject" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_354" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAssociatedProcessobject]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="BomChangesParentPart" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_355" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strBomChangesParentPart]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpUnderReview" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_356" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpUnderReview]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="UsergroupCol" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_357" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strUsergroupCol]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part1023" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_358" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart1023]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part00200" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_359" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart00200]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part00002" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_360" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart00002]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part40229" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_361" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart40229]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part00001" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_362" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart00001]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part00003" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_363" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart00003]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part00178" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_364" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart00178]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyCh955_1023" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_365" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyCh955_1023]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part2736" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_366" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart2736]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyCH955_00200" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_367" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyCH955_00200]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyC799_00002" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_369" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyC799_00002]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyCH955_40229" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_370" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyCH955_40229]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyQ1271_00001" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_371" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyQ1271_00001]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyQ1271_00002" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_372" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyQ1271_00002]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyQ1271_00003" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_373" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyQ1271_00003]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtyCH995_0178" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_374" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtyCH995_0178]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Diffpartnumberqty" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_368" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDiffpartnumberqty]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpInitializedStatus" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_375" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpInitializedStatus]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PendingApprovalCount" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_376" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPendingApprovalCount]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Part00004" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_377" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPart00004]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Qty00004" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_379" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQty00004]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="QtylocalizationSubmit" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_378" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtylocalizationSubmit]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Qtylocalization" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_380" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strQtylocalization]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpStatusmsg" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_381" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpStatusmsg]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Affobjuseexisting" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_382" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffobjuseexisting]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Userlist" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_383" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strUserlist]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="LocalizationPartNumber" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_384" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strLocalizationPartNumber]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PartNum0000" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_385" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPartNum0000]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="open" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_386" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[stropen]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="DropDownVal" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_387" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDropDownVal]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpRework" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_388" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpRework]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpApprove" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_389" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpApprove]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CA3ControlRun" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_390" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCA3ControlRun]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="EditTaskDropDownVal" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_391" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strEditTaskDropDownVal]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedProjects" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_392" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedProjects]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="EstDateVal" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_393" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strEstDateVal]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PartWithBBB1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_394" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPartWithBBB1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="SerialNoDateTask" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_395" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strSerialNoDateTask]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpReleased" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_396" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpReleased]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpCnStatus" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_397" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCnStatus]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Loc" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_398" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strLoc]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="expResolved" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_399" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strexpResolved]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ReleasedSts" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_400" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strReleasedSts]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CA1ApprovalTask" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_401" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCA1ApprovalTask]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpTaskCA2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_402" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpTaskCA2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpAAA_TestUSER" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_403" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpAAA_TestUSER]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpBBB_TestUSER" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_404" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpBBB_TestUSER]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpCCC_TestUSER" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_405" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpCCC_TestUSER]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="createdby" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_406" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strcreatedby]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PartWithAAA" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_407" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPartWithAAA]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PartWithBBB" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_408" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPartWithBBB]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PartWithCCC" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_409" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPartWithCCC]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="AffectedObjectsCountRework" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_410" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strAffectedObjectsCountRework]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ResultingObjectscountRework" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_411" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strResultingObjectscountRework]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpPartState" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_412" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPartState]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="downloadedfilesA" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_413" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strdownloadedfilesA]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Destinationfolder" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_414" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDestinationfolder]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpPDFCA1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_415" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPDFCA1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpPDFCA2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_416" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPDFCA2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="ExpPDFCA3" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_422" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strExpPDFCA3]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CCCNotifies" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_423" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCCCNotifies]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="BOMUser1" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_424" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strBOMUser1]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="BOMUser2" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_425" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strBOMUser2]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="R510" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_426" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strR510]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PDFExcelSheet" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_428" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPDFExcelSheet]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="DesignChangesVal" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_429" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDesignChangesVal]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="DateVal" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_427" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strDateVal]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Localtxt" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_434" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strLocaltxt]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                    </Sequence>
+                    <Sequence DisplayName="pdf" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CNReportval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_435" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCNReportval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Nameval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_436" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strNameval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="BusinessUnitval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_437" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strBusinessUnitval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PryProjval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_438" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPryProjval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CNTypeval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_439" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCNTypeval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PropSolutionval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_440" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPropSolutionval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Impplanval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_441" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strImpplanval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Priorityval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_442" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPriorityval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="MPAContactval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_443" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strMPAContactval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="PDMval" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_445" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strPDMval]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CH955AAA_Test" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_446" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCH955AAA_Test]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CH955BBB_Test" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_447" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCH955BBB_Test]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="CH955CCC_Test" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_444" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strCH955CCC_Test]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="NumberName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_448" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strNumberName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="colupdate" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="GetRowItem_449" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strcolupdate]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                    </Sequence>
+                    <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_20">
+                      <Assign.To>
+                        <OutArgument x:TypeArguments="x:String">[strDestinationfolder]</OutArgument>
+                      </Assign.To>
+                      <Assign.Value>
+                        <InArgument x:TypeArguments="x:String">[strTemplocation.Trim+strDestinationfolder.Trim]</InArgument>
+                      </Assign.Value>
+                    </Assign>
+                  </Sequence>
+                </If.Then>
+              </If>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEachRow.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEachRow>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetBotDetailsByEnvAsset workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="GetBotDetailsByEnvAsset.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strapplicationlogin">[strapplicationlogin]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_strBotMailID">[strBotMailID]</OutArgument>
+          <OutArgument x:TypeArguments="ss:SecureString" x:Key="out_sstrBotPwd">[strBotPwd]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+    </Sequence>
+    <Sequence DisplayName="... When" sap:VirtualizedContainerService.HintSize="421,2280" sap2010:WorkflowViewState.IdRef="Sequence_30">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Update back to excel with A" sap:VirtualizedContainerService.HintSize="379,66" sap2010:WorkflowViewState.IdRef="Sequence_64">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="sd:DataTable" Name="dt_Range" />
+          <Variable x:TypeArguments="x:String" Name="strTodayDate" />
+          <Variable x:TypeArguments="ui:GenericValue" Name="UsedRange" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_13">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[strTodayDate]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[Date.Now.ToString("MMdd")]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[dt_Range]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ReadRange_7" SheetName="[strSheetNameTdcreation]" WorkbookPath="[strExcelFilePath]" />
+        <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Range]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ForEachRow_7">
+          <ui:ForEachRow.Body>
+            <ActivityAction x:TypeArguments="sd:DataRow">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,1253" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                <Sequence.Variables>
+                  <Variable x:TypeArguments="x:String" Name="strExpTID" />
+                  <Variable x:TypeArguments="x:String" Name="strlastName" />
+                </Sequence.Variables>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="562,60" sap2010:WorkflowViewState.IdRef="Assign_14">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[UsedRange]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="ui:GenericValue">[dt_Range.Rows.IndexOf(row)+2]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="TC_ID" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="562,64" sap2010:WorkflowViewState.IdRef="GetRowItem_432" Row="[row]">
+                  <ui:GetRowItem.Value>
+                    <OutArgument x:TypeArguments="x:String">[strExpTID]</OutArgument>
+                  </ui:GetRowItem.Value>
+                </ui:GetRowItem>
+                <If Condition="[strExpTID=strActTCID.Trim]" sap:VirtualizedContainerService.HintSize="562,957" sap2010:WorkflowViewState.IdRef="If_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If.Then>
+                    <Sequence sap:VirtualizedContainerService.HintSize="526,780" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="GenearatedNewName" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="484,64" sap2010:WorkflowViewState.IdRef="GetRowItem_433" Row="[row]">
+                        <ui:GetRowItem.Value>
+                          <OutArgument x:TypeArguments="x:String">[strlastName]</OutArgument>
+                        </ui:GetRowItem.Value>
+                      </ui:GetRowItem>
+                      <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_15">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[strlastName]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[strlastName.Substring(6)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_16">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[strlastName]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[strlastName.Substring(0,4)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <If Condition="[strlastName.Trim&lt;&gt;strTodayDate.Trim]" sap:VirtualizedContainerService.HintSize="484,384" sap2010:WorkflowViewState.IdRef="If_8">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <If.Then>
+                          <Sequence sap:VirtualizedContainerService.HintSize="376,207" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:WriteCell Cell="[&quot;B&quot;+UsedRange.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,115" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="[strSheetNameTdcreation]" Text="[strcolupdate]" WorkbookPath="[strExcelFilePath]" />
+                          </Sequence>
+                        </If.Then>
+                      </If>
+                    </Sequence>
+                  </If.Then>
+                </If>
+              </Sequence>
+            </ActivityAction>
+          </ui:ForEachRow.Body>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:ForEachRow>
+      </Sequence>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Basedata" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Get_Asset.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strbasedataAssetname]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_Assetvalue">[strNumCrit]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Get_Asset workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Get_Asset.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="in_AssetName">[strEmailTo]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="out_Assetvalue">[strSendEmailTo]</OutArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Windchill_Logon workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Windchill_Logon.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strURLName">[strURLName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strapplicationlogin">[strapplicationlogin]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSheetNameTdcreation">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strTCName">TC_M3_Localization</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Windchill_CreateData workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="TC_Localization\Localization_Windchill_CreateData.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strNumberCriteria">[strNumCrit]</InArgument>
+          <InOutArgument x:TypeArguments="x:String" x:Key="strObjects" />
+          <OutArgument x:TypeArguments="x:String" x:Key="strNewNameTo">[strActNewName]</OutArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strNamewostar">[strNewNamewostar]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExcelFilePath">[strExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExcelSheetPath">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocaltxt">[strLocaltxt]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strcolupdate">[strcolupdate]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNumberName">[strNumberName]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke WC_CreateECN_Localization workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="TC_Localization\Localization_WC_CreateECN.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="PrimaryPro">[strExpPrimaryPro.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ExpCNType">[strExpCNType.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ExpPriority">[strExpPriority.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ExpDesignChange">[strExpDesignChange.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ExpHRSR">[strExpHRSR.Trim]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strNewPartNumberArg" />
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPartState">[strExpPartState]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="BusinessUnit">[strExpBusinessUnit.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strProposedSolution">[strNewNamewostar+strExpProposedSolution]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="ExpObjects2">[strExpObjects2.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strName">[strNewNamewostar+strExpProposedSolution]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCreatedNewName">[strLocalizationPartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intInitialize_Counter">[intInitialize_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke TWX_Localization_Submit workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="TC_Localization\Localization_TWX_Submit.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPartCount">[strExpPartCount]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpYesResult">[strExpYesResult]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedDocObjects">[strAffectedDocObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedProjectObjects">[strAffectedProjectObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strObsoletePartNumber">[strObsoletePartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strObsoletePartVersion">[strObsoletePartVersion]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPartNumberWhereUsed">[strNewNamewostar+strPartNumberWhereUsed]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strRemovePartNumber">[strNewNamewostar.Trim+strRemovePartNumber.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedMetadata2">[strAffectedMetadata2]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="strCNNumberout">[strChangeNoticeNumber]</OutArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpStatusmsg">[strExpStatusmsg.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNotifies">[strNotifies]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATOR3">[strCHANGEADMINISTRATOR3]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATOR2">[strCHANGEADMINISTRATOR2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATORI">[strCHANGEADMINISTRATORI]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDMCongrp">[strPDMCongrp.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strparticipantRole">[strParticipantRole]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strUserrmailId">[strUserrmailId]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strUsrGrp">[strAddParcipantUsergrp.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNewBasedata">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedMetadata">[strAffectedMetadata]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffobjuseexisting">[strAffobjuseexisting]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00004">[strPart00004]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strChangeQtySubmit2">[strChangeQtySubmit2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strRemoveQty">[strRemoveQty]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocalizationPartNumber">[strLocalizationPartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intInitialize_Counter">[intInitialize_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Localization_pdf1_Validations workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="TC_Localization\Localization_pdf1_Validations.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="StrdownloadedfilesA">[strdownloadedfilesA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrDestinationfolder">[strDestinationfolder]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrCNnumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpBusinessUnit">[strExpBusinessUnit]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPrimaryPro">[strExpPrimaryPro]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">[strExpCNType]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPriority">[strExpPriority]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCNState">[strExpUnderReview]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelPath">[strExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFHroll">[strExpHRSR.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strnewno">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExppdfCategeory">[strExpDesignChange.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDMCoordinator">[strPDMCongrp]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFCA1">[strExpPDFCA1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFCA2">[strExpPDFCA2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFCA3">[strExpPDFCA3]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCCCNotifies">[strCCCNotifies]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDesignChangesVal">[strDesignChangesVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBOMUser1">[strBOMUser1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBOMUser2">[strBOMUser2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strR510">[strR510]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelSheet">[strPDFExcelSheet]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCNReportval">[strCNReportval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNameval">[strNameval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBusinessUnitval">[strBusinessUnitval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPryProjval">[strPryProjval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCNTypeval">[strCNTypeval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPropSolutionval">[strPropSolutionval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strImpplanval">[strImpplanval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPriorityval">[strPriorityval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strMPAContactval">[strMPAContactval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocalization">[strExpProposedSolution]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDMval">[strPDMval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCH955AAA_Test">[strCH955AAA_Test]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCH955BBB_Test">[strCH955BBB_Test]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCH955CCC_Test">[strCH955CCC_Test]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strR510AAA">[strPartWithAAA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strR510CCC">[strPartWithCCC]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strR510BBB1">[strPartWithBBB1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCN">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocalTxt">[strLocaltxt]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intInitialize_Counter">[intInitialize_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Windchill_AfterSubmit_Validation_Localization workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="TC_Localization\Localization_Windchill_AfterSubmit_Validation.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrNewbasedata">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrName">[strNameExt]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAssociationChangeNumber">[strAssociationChangeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strRemovePartNumber">[strRemovePartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAddPartNumber">[strAddPartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSerialNumberAssignee">[strSerialNumberAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSVR_MfgDateAssignee">[strSVR_MfgDateAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strWWClassAssignee">[strWWClassAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPAFORPNRFAssignee">[strPAFORPNRFAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNotifiesGroup">[strNotifies]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATOR3">[strCHANGEADMINISTRATOR3]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATOR2">[strCHANGEADMINISTRATOR2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATORI">[strCHANGEADMINISTRATORI]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDM_CoGroup">[strPDMCongrp]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNamecolName">[strNamecolName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDescriptionColName">[strDescriptionColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strContextColName">[strContextColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strComplexityColName">[strComplexityColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCategoryColName">[strCategoryColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocationColName">[strLocationColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAttachmentfile">[StrAttachmentfile]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strResultingObjects">[StrResultingObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strResultingObjectscount">[StrResultingObjectscount]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedObjects">[StrAffectedObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedObjectsCount">[strAffectedObjectsCount]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAssociatedProcessobject">[strAssociatedProcessobject]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAssociatedRefObject">[strAssociatedRefObject]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBomChangesParentPart">[strBomChangesParentPart]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart1023">[strPart1023]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00200">[StrPart00200]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00002">[StrPart00002]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart40229">[StrPart40229]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00001">[StrPart00001]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00003">[StrPart00003]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00178">[StrPart00178]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCh955_1023">[StrQtyCh955_1023]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart2736">[strPart2736]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCH955_00200">[strQtyCH955_00200]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyC799_00002">[strQtyC799_00002]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCH955_40229">[strQtyCH955_40229]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyQ1271_00001">[strQtyQ1271_00001]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyQ1271_00002">[StrQtyQ1271_00002]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyQ1271_00003">[strQtyQ1271_00003]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCH995_0178">[strQtyCH995_0178]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDiffpartnumberqty">[strDiffpartnumberqty]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strInitialized">[strInitialized]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strUsergroupCol">[strUsergroupCol]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffobjNA">[strAffobjNA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNAObjects">[strNAObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpProposedSolution">[strExpProposedSolution]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpBusinessUnit">[strExpBusinessUnit]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPrimaryPro">[strExpPrimaryPro]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">[strExpCNType]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpDesignChange">[strExpDesignChange]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPendingApprovalCount">[strPendingApprovalCount]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00004">[strPart00004]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQty00004">[strQty00004]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtylocalization">[strQtylocalization]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtylocalizationSubmit">[strQtylocalizationSubmit]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpUnderReview">[strExpUnderReview]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpInitilized">[strExpInitializedStatus]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intInitialize_Counter">[intInitialize_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Rework_CA1 PDM Approval TASK_Localization workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="TC_Localization\Localization_Rework_CA1 PDM Approval TASK.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCA1ApprovalTask">[strCA1ApprovalTask]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrUserlist">[strUserlist]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpTaskCA2">[strExpTaskCA2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpAAA_TestUSER">[strExpAAA_TestUSER]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strProposeSolCA2">[strProposeSolCA2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrPartNumRemove">[strLocalizationPartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPartNum0000">[strPartNum0000]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPartNumber00200">[StrPart00200]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrNewBasedata">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrAffectedMetadata">[strAffectedMetadata1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedProjectObjects">[strAffectedProjectObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strTypeAll">[strDropDownVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="stropen">[stropen]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Localization_pdf2_Validations workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="TC_Localization\Localization_pdf2_Validations.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="StrdownloadedfilesA">[strdownloadedfilesA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrDestinationfolder">[strDestinationfolder]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrCNnumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpBusinessUnit">[strExpBusinessUnit]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPrimaryPro">[strExpPrimaryPro]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">[strExpCNType]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPriority">[strExpPriority]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCNState">[strExpRework]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelPath">[strExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFHroll">[strExpHRSR.Trim]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strnewno">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExppdfCategeory">[strExpDesignChange]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDMCoordinator">[strPDMCongrp]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFCA1">[strExpPDFCA1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFCA2">[strExpPDFCA2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPDFCA3">[strExpPDFCA3]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCCCNotifies">[strCCCNotifies]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDesignChangesVal">[strExpPartState]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBOMUser1">[strBOMUser1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBOMUser2">[strBOMUser2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strR510">[strR510]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelSheet">[strPDFExcelSheet]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCNReportval">[strCNReportval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNameval">[strNameval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBusinessUnitval">[strBusinessUnitval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPryProjval">[strPryProjval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCNTypeval">[strCNTypeval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPropSolutionval">[strPropSolutionval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strImpplanval">[strImpplanval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPriorityval">[strPriorityval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strMPAContactval">[strMPAContactval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocal">[strLocaltxt]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocalization">[strExpProposedSolution]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDMval">[strPDMval]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCH955AAA_Test">[strCH955AAA_Test]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCH955BBB_Test">[strCH955BBB_Test]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCH955CCC_Test">[strCH955CCC_Test]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCN">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Windchill_AfterRework_Validation_Localization workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="TC_Localization\Localization_Windchill_AfterRework_Validation.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrNewbasedata">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrName">[strNameExt]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAssociationChangeNumber">[strAssociationChangeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strRemovePartNumber">[strRemovePartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAddPartNumber">[strAddPartNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSerialNumberAssignee">[strSerialNumberAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSVR_MfgDateAssignee">[strSVR_MfgDateAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strWWClassAssignee">[strWWClassAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPAFORPNRFAssignee">[strPAFORPNRFAssignee]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNotifiesGroup" />
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATOR3">[strCHANGEADMINISTRATOR3]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATOR2">[strCHANGEADMINISTRATOR2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCHANGEADMINISTRATORI">[strCHANGEADMINISTRATORI]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDM_CoGroup" />
+          <InArgument x:TypeArguments="x:String" x:Key="strNamecolName">[strNamecolName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDescriptionColName">[strDescriptionColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strContextColName">[strContextColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strComplexityColName">[strComplexityColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCategoryColName">[strCategoryColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLocationColName">[strLocationColName]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAttachmentfile">[StrAttachmentfile]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedObjects">[StrAffectedObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAssociatedProcessobject">[strAssociatedProcessobject]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAssociatedRefObject">[strAssociatedRefObject]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBomChangesParentPart">[strBomChangesParentPart]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart1023">[strPart1023]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00200">[StrPart00200]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00002">[strPart00002]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart40229">[StrPart40229]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00001">[StrPart00001]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00003">[StrPart00003]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00178">[StrPart00178]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCh955_1023">[StrQtyCh955_1023]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart2736">[strPart2736]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCH955_00200">[strQtyCH955_00200]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyC799_00002">[strQtyC799_00002]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCH955_40229">[strQtyCH955_40229]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyQ1271_00001">[strQtyQ1271_00001]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyQ1271_00002">[StrQtyQ1271_00002]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyQ1271_00003">[strQtyQ1271_00003]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtyCH995_0178">[strQtyCH995_0178]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDiffpartnumberqty">[strDiffpartnumberqty]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strInitialized">[strInitialized]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strUsergroupCol">[strUsergroupCol]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffobjNA">[strAffobjNA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strNAObjects">[strNAObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpProposedSolution">[strExpProposedSolution]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpBusinessUnit">[strExpBusinessUnit]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpPrimaryPro">[strExpPrimaryPro]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCNType">[strExpCNType]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpDesignChange">[strExpDesignChange]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPendingApprovalCount">[strPendingApprovalCount]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPart00004">[strPart00004]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQty00004">[strQty00004]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtylocalization">[strQtylocalization]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strQtylocalizationSubmit">[strQtylocalizationSubmit]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpUnderReview">[strExpUnderReview]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpInitilized">[strExpInitializedStatus]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strResultingObjects">[StrResultingObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strResultingObjectscountRework">[strResultingObjectscountRework]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strAffectedObjectsCountRework">[strAffectedObjectsCountRework]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intCN_NumberCounter">[intCN_NumberCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Localization_WC_Approval_Task workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="TC_Localization\Localization_WC_Approval_Task.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="strChangeNoticeNumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDropDownVal">[strDropDownVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCA1ApprovalTask">[strCA1ApprovalTask]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpAAA_TestUSER">[strExpAAA_TestUSER]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpBBB_TestUSER">[strExpBBB_TestUSER]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCCC_TestUSER">[strExpCCC_TestUSER]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpRework">[strExpRework]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpApprove">[strExpApprove]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpTaskCA2">[strExpTaskCA2]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strCA3ControlRun">[strCA3ControlRun]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strEditTaskDropDownVal">[strEditTaskDropDownVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strnewbasedata">[strNewNamewostar]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPartWithAAA">[strPartWithAAA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPartWithCCC">[strPartWithCCC]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrAffectedProjects">[strAffectedProjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strEstDateVal">[strEstDateVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPartWithBBB1">[strPartWithBBB1]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSerialNoDateTask">[strSerialNoDateTask]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReleasedSts">[strReleasedSts]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpReleased">[strExpReleased]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCnStatus">[strExpCnStatus]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrResultingObjects">[StrResultingObjects]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="stropen">[stropen]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strLoc">[strLoc]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strexpResolved">[strexpResolved]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strcreatedby">[strcreatedby]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intListPageCounter">[intListPageCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intWc_ObjectCounter">[intWc_ObjectCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intInitialize_Counter">[intInitialize_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:InvokeWorkflowFile>
+      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Localization_pdf3_Validations workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="TC_Localization\Localization_pdf3_Validations.xaml">
+        <ui:InvokeWorkflowFile.Arguments>
+          <InArgument x:TypeArguments="x:String" x:Key="StrdownloadedfilesA">[strdownloadedfilesA]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrDestinationfolder">[strDestinationfolder]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="StrCNnumber">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelPath">[strExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDateValrev">[strEstDateVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strDateVal">[strDateVal]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strPDFExcelSheet">[strPDFExcelSheet]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strExpCN">[strChangeNoticeNumber]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intDropDown_Counter">[intDropDown_Counter]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intBreakCounter">[intBreakCounter]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strActTCID">[strActTCID]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strReportSheet">[strSheetNameTdcreation]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strSendEmailTo">[strSendEmailTo]</InArgument>
+          <InArgument x:TypeArguments="x:Int32" x:Key="intNumberOfRetries">[intNumberOfRetries]</InArgument>
+          <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+        </ui:InvokeWorkflowFile.Arguments>
+      </ui:InvokeWorkflowFile>
+      <ui:CloseApplication ContinueOnError="True" DisplayName="Close Application 'chrome.exe Untitled'" sap:VirtualizedContainerService.HintSize="379,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+        <ui:CloseApplication.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8358d9d5-b85a-4c7d-89fe-71493ce22a88" InformativeScreenshot="25a2da4cfe97cbe603bfcd701da7f4d3" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Untitled - Google Chrome' /&gt;" WaitForReady="COMPLETE">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+          </ui:Target>
+        </ui:CloseApplication.Target>
+      </ui:CloseApplication>
+    </Sequence>
+    <Sequence DisplayName="... Then" sap:VirtualizedContainerService.HintSize="421,66" sap2010:WorkflowViewState.IdRef="Sequence_31">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="final result" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_67">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Name="Body" />
+          <Variable x:TypeArguments="sd:DataTable" Name="Dt" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Assign sap:VirtualizedContainerService.HintSize="334,64" sap2010:WorkflowViewState.IdRef="Assign_21">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[Body]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String" xml:space="preserve">["Hi Team,"+Environment.NewLine+Environment.NewLine+"I am Your Test Automation BOT, please find your Test results details :"+Environment.NewLine+Environment.NewLine+
+"TC Name : TC_M3_Localization - Execution Completed. Please find the attached Test Result Report"+Environment.NewLine+
+Environment.NewLine+Environment.NewLine+Environment.NewLine+"Thanks and Regards,"+Environment.NewLine+"Test Automation BOT"]</InArgument>
+          </Assign.Value>
+        </Assign>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SendSMTPMailMessage workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="SendSMTPMailMessage.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="in_strSendEmailTo">[strSendEmailTo]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_strSubject">["Test Automation Result Notification : TC_M3_Localization - completed , Time stamp : "+Now.ToString+""]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="in_strBody">[Body]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="strBotMailID">[strBotMailID]</InArgument>
+            <InArgument x:TypeArguments="ss:SecureString" x:Key="strBotPwd">[strBotPwd]</InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="strReportExcelPath">[strTemplocation+strReportExcelFilePath]</InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </ui:InvokeWorkflowFile>
+      </Sequence>
+    </Sequence>
+  </Sequence>
+</Activity>
